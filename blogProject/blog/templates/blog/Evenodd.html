@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even ODD</title>
+  </head>
+  <body>
+    <h2>This is Even number page</h2>
+ 
+   <ul>
+    {% for i in data %}
+    {% if i|divisibleby:2 %}
+      <li>{{i}}</li>
+     {% endif %}
+    {% endfor %}
+   </ul>
+    <h2>This is odd number page</h2>
+   <!-- for i in data:  if it is python then write like this {% for i in data%}{% endfor %}  -->
+  <!-- {{i}} print for this  -->
+   <ul>
+    {% for i in data %}
+    {% if not i|divisibleby:2 %}
+      <li>{{i}}</li>
+     {% endif %}
+    {% endfor %}
+   </ul>
+   
+
+   
+  </body>
+</html>
